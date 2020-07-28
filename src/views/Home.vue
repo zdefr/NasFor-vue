@@ -1,19 +1,16 @@
 <template>
   <div class="home">
-    <Nav></Nav>
-    <Header></Header>
+    <class-list></class-list>
   </div>
 </template>
 
 <script>
-import Nav from '../components/nav'
-import  Header from '../components/header'
+import classList from '../components/index/classlist'
 
 export default {
   name: 'Home',
   components: {
-    Nav,
-    Header
+    classList
   }
 }
 </script>

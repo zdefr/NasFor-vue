@@ -1,12 +1,12 @@
 <template>
   <header style="min-width: 1000px">
     <div class="head-left">
-      <img src="../../public/IMG_20200728_154232.png" ALT="XX" class="logo">
+      <router-link to="/"><img src="../../public/IMG_20200728_154232.png" ALT="XX" class="logo"></router-link>
     </div>
 
     <div class="head-mid">
       <input type="text" placeholder="请输入要搜索的内容" v-model="SEARmsg"></input>
-      <button type="button" class="button-search" ><i class="el-icon-search"></i>搜索</button>
+      <button type="button" class="button-search"><i class="el-icon-search"></i>搜索</button>
     </div>
 
     <div class="head-right">
@@ -82,6 +82,7 @@ input {
   min-width: 100px;
   color: white;
   background-color: red;
+  cursor: pointer;
 }
 
 .button-search:hover {
@@ -109,9 +110,10 @@ i {
   min-width: 180px;
   background-color: #fafafa;
   color: red;
+  cursor: pointer;
 }
 
-.button-me:hover{
+.button-me:hover {
   border: solid 2px red;
 }
 </style>

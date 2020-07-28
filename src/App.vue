@@ -1,8 +1,23 @@
 <template>
   <div id="app">
-    <router-view/>
+    <Nav></Nav>
+    <Header></Header>
+    <router-view></router-view>
   </div>
 </template>
+
+<script>
+import Nav from './components/nav'
+import  Header from './components/header'
+
+export default {
+  name: 'app',
+  components: {
+    Nav,
+    Header
+  }
+}
+</script>
 
 <style>
   body{
