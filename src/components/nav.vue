@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav style="min-width: 1000px">
         <span class="router-to-index nav-a"
                      :class="{'nav-choosed': navTitle=='/index'}" @click="routeTo('/index')">
             <span>首页</span>
@@ -37,6 +37,9 @@
         },
         methods:{
             routeTo:function (toUrl) {
+                if (toUrl==this.navTitle){
+                    return;
+                }
                 this.navTitle = toUrl;
                 this.$store.commit('changeTitle',toUrl)
             }
@@ -61,9 +64,8 @@
     }
 
     .nav-a:hover{
-        color: white;
-        font-weight: bold;
-        background-color: #436289;
+        color: red;
+        background-color: white;
     }
 
     .router-to-right {
