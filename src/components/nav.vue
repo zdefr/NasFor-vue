@@ -52,6 +52,10 @@
         background-color: gray;
         padding: 0;
         font-size: 15px;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
     }
 
     .nav-a {

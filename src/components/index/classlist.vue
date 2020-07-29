@@ -1,5 +1,4 @@
 <template>
-    <div style="min-width: 1000px">
         <div class="index-class-list">
             <div style="position: absolute;height: 100%;width: 100%;">
                 <aside class="goods-category-list">
@@ -37,7 +36,6 @@
                 </aside>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
@@ -90,11 +88,17 @@
     }
 
     .index-class-list {
+        box-sizing: border-box;
         margin: 5px auto 0 auto;
         width: 60%;
         position: relative;
         padding-bottom: 20%;
-
+        min-width: 1000px;
+        min-height: 300px;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
     }
 
     .goods-category-list {
@@ -118,16 +122,20 @@
 
     .category-list-ul {
         list-style-type: none;
-        line-height: 28px;
+        line-height: 30px;
         margin-top: 5px;
         padding: 0;
+    }
+
+    .category-list-li{
+        border-bottom: solid 2px #d5d5d5;
+        margin: 0 18% 0 18%;
     }
 
     .category-list-li:hover {
         font-weight: bold;
         cursor: pointer;
-        margin: 0 25% 0 25%;
-        border-bottom: solid 2px #d7d7d7;
+        border-bottom: solid 2px #b85d5d;
     }
 
     .goods-roller {
