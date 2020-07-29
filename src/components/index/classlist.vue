@@ -1,22 +1,40 @@
 <template>
-  <div class="index-class-list">
-    <div style="position: absolute;height: 100%;width: 100%;">
-      <aside class="goods-category-list">
-        <header>功能分类</header>
-        <ul class="category-list-ul">
-          <li v-for="item in category" :key="item.url" class="category-list-li">
-            <span>{{ item.name }}</span>
-          </li>
-        </ul>
-      </aside>
-      <main class="goods-roller">
-        <img src="../../../public/IMG_20200728_221912.png" alt="xx">
-      </main>
-      <aside class="person-msg">
-        <div class="head-portrait">
-          <img src="../../../public/IMG_20200728_154232.png" alt="xx">
-        </div>
-      </aside>
+  <div style="min-width: 1000px">
+    <div class="index-class-list">
+      <div style="position: absolute;height: 100%;width: 100%;">
+        <aside class="goods-category-list">
+          <header>功能分类</header>
+          <ul class="category-list-ul">
+            <li v-for="item in category" :key="item.url" class="category-list-li">
+              <span>{{ item.name }}</span>
+            </li>
+          </ul>
+        </aside>
+        <main class="goods-roller">
+          <img src="../../../public/IMG_20200728_221912.png" alt="xx">
+        </main>
+        <aside class="person-msg">
+          <div class="head-portrait">
+            <img src="../../../public/IMG_20200728_154232.png" alt="xx">
+          </div>
+          <div class="person-msg-application">
+            <header>我的应用</header>
+            <main>
+              <button type="button"><i class="el-icon-star-off"></i></button>
+              <button type="button"><i class="el-icon-s-data"></i></button>
+              <button type="button"><i class="el-icon-tickets"></i></button>
+              <button type="button"><i class="el-icon-download"></i></button>
+              <button type="button"><i class="el-icon-upload"></i></button>
+              <button type="button"><i class="el-icon-upload2"></i></button>
+              <button type="button"><i class="el-icon-message"></i></button>
+              <button type="button"><i class="el-icon-setting"></i></button>
+              <button type="button"><i class="el-icon-bell"></i></button>
+              <button type="button" style="width: 70%;margin: 5% 15%"><i class="el-icon-share"></i></button>
+            </main>
+
+          </div>
+        </aside>
+      </div>
     </div>
   </div>
 </template>
@@ -46,6 +64,18 @@ export default {
         {
           url: '/a',
           name: '其他'
+        },
+        {
+          url: '/a',
+          name: '衣服'
+        },
+        {
+          url: '/a',
+          name: '箱包'
+        },
+        {
+          url: '/a',
+          name: '其他'
         }
       ]
     }
@@ -55,10 +85,11 @@ export default {
 
 <style scoped>
 .index-class-list {
-  margin: 5px 20% 0 20%;
-  min-width: 800px;
+  margin: 5px auto 0 auto;
+  width: 60%;
   position: relative;
   padding-bottom: 20%;
+
 }
 
 .goods-category-list {
@@ -70,6 +101,7 @@ export default {
   text-align: center;
   height: 100%;
   position: absolute;
+  overflow: hidden;
 }
 
 .goods-category-list header {
@@ -125,13 +157,58 @@ export default {
   margin: 20px auto 10px auto;
 }
 
-.person-msg .head-portrait:hover{
-  cursor:pointer;
+.person-msg .head-portrait:hover {
+  cursor: pointer;
   border: solid 2px red;
 }
 
-.person-msg .head-portrait img{
+.person-msg .head-portrait img {
   height: 100%;
   width: 100%;
+}
+
+.person-msg-application {
+  width: 80%;
+  height: 60%;
+  margin: 0 auto 0 auto;
+  position: relative;
+}
+
+.person-msg-application header {
+  background-color: red;
+  text-align: center;
+  color: white;
+  height: 20px;
+  font-weight: bold;
+}
+
+.person-msg-application main{
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  bottom: 10%;
+  border: solid 2px red;
+  padding: 5%;
+  overflow: hidden;
+}
+
+.person-msg-application main button{
+  width: 25%;
+  height: 20%;
+  margin: 5% 4% 0 4%;
+  padding: 0;
+  font-size: 15px;
+  border:  solid 2px #e0e0e0;
+  background-color: white;
+  border-radius: 5%;
+}
+
+.person-msg-application main button:hover{
+  border: solid 2px red;
+}
+
+.person-msg-application main button i{
+  color: red;
 }
 </style>
